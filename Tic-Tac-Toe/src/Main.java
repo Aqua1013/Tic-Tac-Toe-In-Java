@@ -3,12 +3,15 @@ import java.util.Scanner;
 
 public class Main {
 
-    private static final char[][] board = {{'-', '-', '-'}, {'-', '-', '-'}, {'-', '-', '-'}};
-    private static final Scanner sc = new Scanner(System.in);
-    private static final Random rand = new Random();
+    private static final char[][] board;
+    private static final Scanner sc;
+    private static final Random rand;
 
     public static void main(String[] args) {
         //When Program is executed
+        board = {{'-', '-', '-'}, {'-', '-', '-'}, {'-', '-', '-'}};
+        sc = new Scanner(System.in);
+        rand = new Random();
         startGame();
     }
 
