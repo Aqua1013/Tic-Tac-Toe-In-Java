@@ -5,12 +5,13 @@ public class Main{
 
     private static final Scanner sc = new Scanner(System.in);
     private static final Random rand = new Random();
-    private static Board b = new Board();
+    private static Board b;
     private static Game g;
 
 
     public static void main(String[] args) throws InterruptedException {
         //When Program is executed
+        b = new Board();
         g = new Game(b);
         System.out.println("TIC TAC TOE: PLAYER vs COMPUTER");
         b.draw();
