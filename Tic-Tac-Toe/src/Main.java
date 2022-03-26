@@ -5,26 +5,26 @@ public class Main{
 
     private static final Scanner sc = new Scanner(System.in);
     private static final Random rand = new Random();
-    private static Board b;
-    private static Game g;
+    private static Board board;
+    private static Game game;
 
 
     public static void main(String[] args) throws InterruptedException {
         //When Program is executed
-        b = new Board();
-        g = new Game(b);
+        board = new Board();
+        game = new Game(board);
         System.out.println("TIC TAC TOE: PLAYER vs COMPUTER");
-        b.draw();
+        board.draw();
         int[] turn;
-        b.addPlacement(g.promptUserPlacement(), b.getPLAYER());
-        b.draw();
+        board.addPlacement(game.promptUserPlacement(), board.getPLAYER());
+        board.draw();
         while(true){
-            g.aiTurn(Board.getBoard());
-            if((turn = g.userTurn()) == null){
+            game.aiTurn(Board.getBoard());
+            if((turn = game.userTurn()) == null){
                 break;
             }
-            b.addPlacement(turn, 'X');
-            b.draw();
+            board.addPlacement(turn, 'X');
+            board.draw();
         }
     }
 }
