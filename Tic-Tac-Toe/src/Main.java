@@ -1,8 +1,8 @@
 public class Main{
 
+    private static boolean playing;
     private static Board board;
     private static Game game;
-
 
     public static void main(String[] args) throws InterruptedException {
         //When Program is executed
@@ -13,13 +13,16 @@ public class Main{
         int[] turn;
         board.addPlacement(game.promptUserPlacement(), board.getPLAYER());
         board.draw();
-        while(true){
+        playing = true;
+        while(playing){
             game.aiTurn(Board.getBoard());
-            if((turn = game.userTurn()) == null){
-                break;
+            if((turn = game.userTurn()) != null){
+                board.addPlacement(turn, 'X');
+                board.draw();
             }
-            board.addPlacement(turn, 'X');
-            board.draw();
+            else{
+                playing = false;
+            }   
         }
-    }
-}
+    }// end Main.main
+}// end Main
