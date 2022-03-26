@@ -1,10 +1,5 @@
-import java.util.Random;
-import java.util.Scanner;
-
 public class Main{
 
-    private static final Scanner sc = new Scanner(System.in);
-    private static final Random rand = new Random();
     private static Board board;
     private static Game game;
 
