@@ -1,7 +1,7 @@
 public class Board {
 
     private final static char PLAYER = 'X';
-    private final char COMPUTER = 'O';
+    private final static char COMPUTER = 'O';
 
     private static char[][] board;
 
